@@ -1,4 +1,4 @@
-Twitter & Twitter-likes API:
+===Twitter & Twitter-likes API:===
 
 - http://apiwiki.twitter.com/
 
@@ -7,7 +7,7 @@ Twitter & Twitter-likes API:
 - http://wiki.jisko.net/w/index.php?title=API&oldid=189 (Spanish)
 
 
-Plasma related:
+===Plasma related:===
 
 - http://techbase.kde.org/Projects/Plasma/Plasmoids
 
