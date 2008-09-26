@@ -16,34 +16,34 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 == Engine ==
 
-- Load plugins (ServiceInterface)
-- Store configuration (ConfigurationStorage)
-  - configuration are "abstract" (configTO?)
-- Can connect to website (ConnectionManager)
-- Returns to service data from website (json datas for microblog)
-- Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
+  * Load plugins (ServiceInterface)
+  * Store configuration (ConfigurationStorage)
+    * configuration are "abstract" (configTO?)
+  * Can connect to website (ConnectionManager)
+  * Returns to service data from website (json datas for microblog)
+  * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
 
 
 *PluginLoader*:
-- ????
+  * ????
 
 *ItemInterface*:
-- ???? :D
+  * ???? :D
 
 *ConfigurationStorage*:
-- save configTO
-- load configTO
+  * save configTO
+  * load configTO
 
 
 *ConfigTO*:
-- login
-- password
-- website url
+  * login
+  * password
+  * website url
 
 
 *ConnectionManager*:
-- connect to website
-- return data
+  * connect to website
+  * return data
 
 ==_Services Plugin_==
 The way it works:
