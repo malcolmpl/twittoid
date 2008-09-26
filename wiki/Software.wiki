@@ -1,5 +1,7 @@
 The Twittoid should be divided in tasks.
+
 *Please edit this section if whatever is wrong. I've never been using twitter so you know this system better.*
+
 
 ==UI==
 Here we should be able to select if we can see all messages for all TL¹ or for one specific. It would be like a filter.
@@ -7,6 +9,7 @@ The same about posting a new message. We should be able to post it to a specific
 It will show like kdetwitter our followings' pictures and our picture near the post form.
 
 ¹I mean TL (Twitter Like) as for those different microblogging webpages: Twitter, Jisko, Blip, etc.
+
 
 ==Services Plugin==
 The way it works:
