@@ -21,9 +21,12 @@
 #define CONFIGURATIONTO_H_
 
 class QString;
+class QUuid;
 
 namespace MicroBlogEngine
 {
+    typedef QString GUID;
+    
     class ConfigurationTO
     {
     public:
@@ -36,6 +39,8 @@ namespace MicroBlogEngine
         void setPassword(QString val);
         QString getWebsiteUrl();
         void setWebsiteUrl(QString val);
+        GUID getPluginId();
+        void setPluginId(GUID val);
         
     private:
         class Private;

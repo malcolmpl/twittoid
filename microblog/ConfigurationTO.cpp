@@ -18,6 +18,7 @@
 *******************************************************************************/
 
 #include <QString>
+#include <QUuid>
 
 #include "ConfigurationTO.h"
 
@@ -32,6 +33,8 @@ namespace MicroBlogEngine
             QString m_login;
             QString m_password;
             QString m_websiteUrl;
+            
+            GUID m_pluginID;
     };
     
     
@@ -72,5 +75,15 @@ namespace MicroBlogEngine
     void ConfigurationTO::setWebsiteUrl(QString val)
     {
         d->m_websiteUrl = val;
+    }
+    
+    GUID ConfigurationTO::getPluginId()
+    {
+        return d->m_pluginID;
+    }
+    
+    void ConfigurationTO::setPluginId(GUID val)
+    {
+        d->m_pluginID = val;
     }
 };
