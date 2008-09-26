@@ -14,6 +14,37 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 ¹I mean TL (Twitter Like) as for those different microblogging webpages: Twitter, Jisko, Blip, etc.
 
 
+== Engine ==
+
+- Load plugins (ServiceInterface)
+- Store configuration (ConfigurationStorage)
+  - configuration are "abstract" (configTO?)
+- Can connect to website (ConnectionManager)
+- Returns to service data from website (json datas for microblog)
+- Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
+
+
+*PluginLoader*:
+- ????
+
+*ItemInterface*:
+- ???? :D
+
+*ConfigurationStorage*:
+- save configTO
+- load configTO
+
+
+*ConfigTO*:
+- login
+- password
+- website url
+
+
+*ConnectionManager*:
+- connect to website
+- return data
+
 ==_Services Plugin_==
 The way it works:
 Services->Microblog (Service)->Jisko (Plugin).
