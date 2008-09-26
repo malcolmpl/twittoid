@@ -15,4 +15,4 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 The way it works:
 Services->Microblog (Service)->Jisko (Plugin).
 
-So now through the services class we should be able to operate with Jisko using plugin's methods.
+So now we should be able to operate with Jisko using plugin's methods.
