@@ -4,7 +4,7 @@ The Twittoid should be divided in tasks.
 
 
 ==_UI_==
-Technologies: Plasma.
+Technologies:
 
 Here we should be able to select if we can see all messages for all TL¹ or for one specific. It would be like a filter.
 The same about posting a new message. We should be able to post it to a specific TL or to all TL's.
@@ -21,7 +21,7 @@ So now we should be able to operate with Jisko using plugin's methods.
 
 
 ==_Config_==
-Technologies: kdelibs???/Qt???
+Technologies:
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
 
