@@ -24,3 +24,4 @@ It has it's own UI. Maybe similar like Kopete for adding new TL's.
 It should store preferences in..
 
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
+Menda: KWallet would be good imho, but i don't know if we have more alternatives.
