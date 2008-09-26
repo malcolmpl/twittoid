@@ -45,7 +45,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * connect to website
   * return data
 
-==_Services Plugin_==
+== Services Plugin ==
 The way it works:
 Services->Microblog (Service)->Jisko (Plugin).
 
