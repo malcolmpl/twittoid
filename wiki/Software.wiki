@@ -21,7 +21,7 @@ So now we should be able to operate with Jisko using plugin's methods.
 ==_Config_==
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
 
-It should store preferences in..
+It should store preferences in..??? XML??? I dont know dudes :)
 
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
