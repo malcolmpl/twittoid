@@ -25,7 +25,7 @@ Technologies: kdelibs???/Qt???
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
 
-Plasma should help us to store preferences.
+Plasma should help us to store preferences with KConfigGroup.
 
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
