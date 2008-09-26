@@ -21,11 +21,11 @@ So now we should be able to operate with Jisko using plugin's methods.
 
 
 ==_Config_==
-Technologies: kdelibs, Qt.
+Technologies: kdelibs???/Qt???
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
 
-It should store preferences in..??? XML??? I dont know dudes :)
+Plasma should help us to store preferences.
 
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
