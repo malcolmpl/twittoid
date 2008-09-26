@@ -11,7 +11,6 @@ SET (twittoid_MOC
     )
     
 SET (twittoid_SRC
-    main.cpp
 		)
 
 QT4_AUTOMOC( ${twittoid_MOC}) 
