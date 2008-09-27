@@ -15,7 +15,6 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 
 == Engine ==
-http://plexydesk.homelinux.org/~malcolm/diagram2.png
   * Load plugins (ServiceInterface)
   * Store configuration (ConfigurationStorage)
     * configuration are "abstract" (configTO?)
@@ -62,3 +61,6 @@ Plasma should help us to store preferences with KConfigGroup.
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
 Menda: KWallet would be good imho, but i don't know if we have more alternatives.
+
+
+http://plexydesk.homelinux.org/~malcolm/diagram2.png
