@@ -28,18 +28,18 @@ This superclass will provide services for the different types of webservices we 
   This will be the interface through we will be able to use plugins. Microblog will be the only class which manages Plugins, so another classes won't have direct access to plugins.
 
 
-== ItemInterface ==
+== Item ==
 Item described parsed data which engine send to UI.
 
 http://img89.imageshack.us/img89/5835/itemic7.png
 
 
-== ConfigurationStorage ==
+== !ConfigurationStorage ==
   * save configTO
   * load configTO
 
 
-== ConfigTO ==
+== !ConfigTO ==
   * login
   * password
   * website url
