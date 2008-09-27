@@ -20,6 +20,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Can connect to website (ConnectionManager)
   * Returns to service data from website (json datas for microblog)
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
+  * Load plugins (?)
 
 
 *AbstractServices*:
