@@ -22,11 +22,11 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
   * Load plugins (?)
 
-
+----
 == !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
   * Microblog:
-  This will be the interface through we will be able to use plugins. Microblog will be the only class which manages Plugins, so another classes won't have access to plugins.
+  This will be the interface through we will be able to use plugins. Microblog will be the only class which manages Plugins, so another classes won't have direct access to plugins.
 
 
 == ItemInterface ==
@@ -55,7 +55,7 @@ Item described parsed data which engine send to ui
 
 http://img204.imageshack.us/img204/7712/diagramoe5.png
 
-
+----
 = Config =
   * Technologies: QT
 
