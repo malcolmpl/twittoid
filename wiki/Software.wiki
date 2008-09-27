@@ -34,17 +34,17 @@ http://img392.imageshack.us/img392/2097/itemqc6.png
 
 
 == !ConfigurationStorage ==
-  * save configTO
-  * load configTO
+  * save all/selected configItem.
+  * load all/selected configItem.
 
 
-== !ConfigTO ==
+== !ConfigItem ==
   * login
   * password
   * website url
 
 
-== ConnectionManager ==
+== !ConnectionManager ==
   * Connects to website
   * Returns data
 
