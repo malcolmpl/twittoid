@@ -23,10 +23,10 @@
 #include <config.h>
 #include "typedefs.h"
 
+#include <QDateTime>
+
 namespace MicroBlogEngine
 {
-    class QDateTime;
-
     class VISIBLE_SYM ItemInterface
     {
     public:

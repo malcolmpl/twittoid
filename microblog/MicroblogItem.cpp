@@ -38,7 +38,7 @@ namespace MicroBlogEngine
         QString m_who;
         QImage m_picture;
         QString m_message;
-    }
+    };
 
     MicroblogItem::MicroblogItem()
         : d(new Private())
