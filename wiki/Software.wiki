@@ -4,7 +4,7 @@ The Twittoid should be divided in tasks.
 
 
 
-== UI ==
+= UI =
   * Technologies: Plasma and Plexy (both independent UIs).
 
 Here we should be able to select if we can see all messages for all TL¹ or for one specific. It would be like a filter.
@@ -14,7 +14,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 ¹I mean TL (Twitter Like) as for those different microblogging webpages: Twitter, Jisko, Blip, etc.
 
 
-== !SingletonEngine ==
+= !SingletonEngine =
   * Store configuration (ConfigurationStorage)
     * configuration are "abstract" (configTO?)
   * Can connect to website (ConnectionManager)
@@ -23,7 +23,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Load plugins (?)
 
 
-=== !AbstractServices ===
+== !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
   * Microblog:
   This will be the interface through we will be able to use plugins. Microblog will provide the same interface.
@@ -56,7 +56,7 @@ Item described parsed data which engine send to ui
 http://img204.imageshack.us/img204/7712/diagramoe5.png
 
 
-== Config ==
+= Config =
   * Technologies: QT
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
