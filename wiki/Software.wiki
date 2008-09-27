@@ -51,7 +51,7 @@ Item described parsed data which engine send to ui
   * connect to website
   * return data
 
-http://img136.imageshack.us/img136/1555/diagrampe2.png
+http://img204.imageshack.us/img204/7712/diagramoe5.png
 
 
 == Config ==
