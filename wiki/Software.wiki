@@ -26,30 +26,30 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 == !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
   * Microblog:
-  This will be the interface through we will be able to use plugins. Microblog will provide the same interface.
+  This will be the interface through we will be able to use plugins. Microblog will be the only class which manages Plugins, so another classes won't have access to plugins.
 
-*ItemInterface*:
 
+== ItemInterface ==
 Item described parsed data which engine send to ui
-  * id
-  * time
-  * from
-  * who
-  * picture
-  * message
+  - id
+  - time
+  - from
+  - who
+  - picture
+  - message
 
-*ConfigurationStorage*:
+== ConfigurationStorage ==
   * save configTO
   * load configTO
 
 
-*ConfigTO*:
+== ConfigTO ==
   * login
   * password
   * website url
 
 
-*ConnectionManager*:
+== ConnectionManager ==
   * connect to website
   * return data
 
