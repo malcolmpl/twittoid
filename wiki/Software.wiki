@@ -23,8 +23,10 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Load plugins (?)
 
 
-*AbstractServices*:
-
+=== !AbstractServices ===
+This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
+  * Microblog:
+  This will be the interface through we will be able to use plugins. Microblog will provide the same interface.
 
 *ItemInterface*:
 
