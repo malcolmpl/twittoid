@@ -39,9 +39,7 @@ http://img392.imageshack.us/img392/2097/itemqc6.png
 
 
 == !ConfigItem ==
-  * login
-  * password
-  * website url
+http://img256.imageshack.us/img256/8049/configitemxe0.png
 
 
 == !ConnectionManager ==
