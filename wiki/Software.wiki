@@ -13,7 +13,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 ¹I mean TL (Twitter Like) as for those different microblogging webpages: Twitter, Jisko, Blip, etc.
 
-
+----
 = !SingletonEngine =
   * Store configuration (ConfigurationStorage)
     * configuration are "abstract" (configTO?)
@@ -22,7 +22,6 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
   * Load plugins (?)
 
-----
 == !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
   * Microblog:
