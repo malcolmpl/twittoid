@@ -5,7 +5,7 @@ The Twittoid should be divided in tasks.
 
 
 == UI ==
-  * Technologies:
+  * Technologies: Plasma and Plexy (both independent UIs).
 
 Here we should be able to select if we can see all messages for all TL¹ or for one specific. It would be like a filter.
 The same about posting a new message. We should be able to post it to a specific TL or to all TL's.
