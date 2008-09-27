@@ -29,8 +29,8 @@ http://img392.imageshack.us/img392/2097/itemqc6.png
 
 
 == !ConfigurationStorage ==
-  * save all/selected configItem.
-  * load all/selected configItem.
+  * Save all/selected configItem.
+  * Load all/selected configItem.
 
 
 == !ConfigItem ==
