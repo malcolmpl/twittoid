@@ -17,8 +17,8 @@
 *  along with twittoid. If not, see <http://www.gnu.org/licenses/lgpl.html>
 *******************************************************************************/
 
+#include "typedefs.h"
 #include <QString>
-#include <QUuid>
 
 #include "ConfigurationTO.h"
 

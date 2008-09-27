@@ -17,33 +17,24 @@
 *  along with twittoid. If not, see <http://www.gnu.org/licenses/lgpl.html>
 *******************************************************************************/
 
-#ifndef CONFIGURATIONTO_H_
-#define CONFIGURATIONTO_H_
-
-class QString;
-class GUID;
+#ifndef ITEMINTERFACE_H_
+#define ITEMINTERFACE_H_
 
 namespace MicroBlogEngine
 {
-    class ConfigurationTO
+    class QDateTime;
+    class GUID;
+
+    class VISIBLE_SYM ItemInterface
     {
     public:
-        ConfigurationTO();
-        virtual ~ConfigurationTO();
-        
-        QString getLogin();
-        void setLogin(QString val);
-        QString getPassword();
-        void setPassword(QString val);
-        QString getWebsiteUrl();
-        void setWebsiteUrl(QString val);
-        GUID getPluginId();
-        void setPluginId(GUID val);
-        
-    private:
-        class Private;
-        Private *d;
-    };
-};
+        ItemInterface();
+        virtual ~ItemInterface();
 
-#endif /*CONFIGURATIONTO_H_*/
+        virtual GUID Id();
+        virtual QDateTime time();
+    };
+
+}
+
+#endif /*ITEMINTERFACE_H_*/
