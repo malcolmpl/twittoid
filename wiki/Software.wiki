@@ -29,7 +29,7 @@ This superclass will provide services for the different types of webservices we 
 
 
 == Item ==
-Item described parsed data which engine send to UI.
+Item describes parsed data which the Engine sends to UI.
 
 http://img89.imageshack.us/img89/5835/itemic7.png
 
