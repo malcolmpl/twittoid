@@ -46,15 +46,9 @@ Item described parsed data which engine send to ui
 
 http://img136.imageshack.us/img136/1555/diagrampe2.png
 
-== Services Interface ==
-The way it works:
-Services->Microblog (Service)->Jisko (Plugin).
-
-So now we should be able to operate with Jisko using plugin's methods.
-
 
 == Config ==
-  * Technologies:
+  * Technologies: QT
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
 
@@ -63,4 +57,3 @@ Plasma should help us to store preferences with KConfigGroup.
 TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
 Menda: KWallet would be good imho, but i don't know if we have more alternatives.
-
