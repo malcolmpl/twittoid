@@ -49,6 +49,6 @@ http://img174.imageshack.us/img174/5148/diagramxg2.png
   * Technologies: QT
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
-Config will be stored through ConfigStorage.
+Config will be stored through !ConfigStorage.
 
 TODO: How do we store encrypted passwords?
