@@ -1,4 +1,4 @@
-The Twittoid should be divided in tasks.
+The Twittoid will be divided in some big components.
 
 *Please edit this section if whatever is wrong. I've never been using twitter so you know this system better.*
 
