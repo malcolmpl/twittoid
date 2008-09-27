@@ -14,7 +14,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 ¹I mean TL (Twitter Like) as for those different microblogging webpages: Twitter, Jisko, Blip, etc.
 
 
-== Engine ==
+== !SingletonEngine ==
   * Store configuration (ConfigurationStorage)
     * configuration are "abstract" (configTO?)
   * Can connect to website (ConnectionManager)
