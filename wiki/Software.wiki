@@ -49,7 +49,7 @@ http://img392.imageshack.us/img392/2097/itemqc6.png
   * Returns data
 
 == UI+Engine diagram ==
-http://img204.imageshack.us/img204/7712/diagramoe5.png
+http://img88.imageshack.us/img88/899/diagramlt1.png
 
 ----
 = Config =
