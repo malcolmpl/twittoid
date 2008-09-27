@@ -15,12 +15,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 ----
 = !SingletonEngine =
-  * Store configuration (ConfigurationStorage)
-    * configuration are "abstract" (configTO?)
-  * Can connect to website (ConnectionManager)
-  * Returns to service data from website (json datas for microblog)
-  * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
-  * Load plugins (?)
+It is the main part of Twittoid. It's made up of these parts above:
 
 == PluginLoader ==
   * load plugins
@@ -50,8 +45,8 @@ http://img89.imageshack.us/img89/5835/itemic7.png
 
 
 == ConnectionManager ==
-  * connect to website
-  * return data
+  * Connects to website
+  * Returns data
 
 == UI+Engine diagram ==
 http://img204.imageshack.us/img204/7712/diagramoe5.png
