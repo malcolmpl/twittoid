@@ -28,6 +28,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 *ItemInterface*:
   * ???? :D
+Item described parsed data which engine send to ui
 
 *ConfigurationStorage*:
   * save configTO
