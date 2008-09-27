@@ -29,8 +29,10 @@ This superclass will provide services for the different types of webservices we 
 
 
 == ItemInterface ==
-Item described parsed data which engine send to ui
+Item described parsed data which engine send to UI.
+
 http://img89.imageshack.us/img89/5835/itemic7.png
+
 
 == ConfigurationStorage ==
   * save configTO
