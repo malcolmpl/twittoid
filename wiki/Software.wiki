@@ -23,8 +23,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
 
 
-*PluginLoader*:
-  * ????
+*ServicesInterface*
 
 *ItemInterface*:
   * ???? :D
@@ -45,7 +44,7 @@ Item described parsed data which engine send to ui
   * connect to website
   * return data
 
-== Services Plugin ==
+== Services Interface ==
 The way it works:
 Services->Microblog (Service)->Jisko (Plugin).
 
