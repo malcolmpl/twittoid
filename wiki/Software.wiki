@@ -15,6 +15,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 ----
 = !SingletonEngine =
+  * Technologies: QT
 It is the main part of Twittoid. It's made up of these parts above:
 
 == !AbstractServices ==
