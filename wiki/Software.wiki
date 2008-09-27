@@ -23,9 +23,6 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
 
 
-*Engine Singleton*
-
-
 *ServicesInterface*
 
 *ItemInterface*:
