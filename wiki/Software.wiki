@@ -15,7 +15,7 @@ It will show like kdetwitter our followings' pictures and our picture near the p
 
 
 == Engine ==
-[[http://plexydesk.homelinux.org/~malcolm/diagram2.png]]
+http://plexydesk.homelinux.org/~malcolm/diagram2.png
   * Load plugins (ServiceInterface)
   * Store configuration (ConfigurationStorage)
     * configuration are "abstract" (configTO?)
