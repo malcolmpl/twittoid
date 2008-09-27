@@ -22,6 +22,10 @@ It will show like kdetwitter our followings' pictures and our picture near the p
   * Send to UI Items per message from microblogs (Items are abstract? We need ItemInterface?)
   * Load plugins (?)
 
+= PluginLoader =
+  * load plugins
+  * list of loaded plugins
+
 == !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
   === Microblog ===
