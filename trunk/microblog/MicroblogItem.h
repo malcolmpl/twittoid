@@ -17,26 +17,29 @@
 *  along with twittoid. If not, see <http://www.gnu.org/licenses/lgpl.html>
 *******************************************************************************/
 
-#ifndef ITEMINTERFACE_H_
-#define ITEMINTERFACE_H_
+#ifndef MICROBLOGITEM_H_
+#define MICROBLOGITEM_H_
 
+#include "ItemInterface.h"
 #include <config.h>
-#include "typedefs.h"
 
 namespace MicroBlogEngine
 {
-    class QDateTime;
 
-    class VISIBLE_SYM ItemInterface
+    class VISIBLE_SYM MicroblogItem : public ItemInterface
     {
     public:
-        ItemInterface();
-        virtual ~ItemInterface();
-
-        virtual GUID Id();
-        virtual QDateTime time();
-    };
+	    MicroblogItem();
+	    virtual ~MicroblogItem();
+        
+        GUID Id();
+        QDateTime time();
+        
+    private:
+        class Private;
+        Private *d;
+};
 
 }
 
-#endif /*ITEMINTERFACE_H_*/
+#endif /*MICROBLOGITEM_H_*/

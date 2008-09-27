@@ -16,6 +16,7 @@ include_directories(
 set(microblog_SRCS
     ConfigurationTO.cpp
     ConfigurationStorage.cpp
+    MicroblogItem.cpp
 )
 
 add_library(microblog SHARED ${microblog_SRCS}) 
