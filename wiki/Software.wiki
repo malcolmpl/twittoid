@@ -44,6 +44,8 @@ Item described parsed data which engine send to ui
   * connect to website
   * return data
 
+http://img136.imageshack.us/img136/1555/diagrampe2.png
+
 == Services Interface ==
 The way it works:
 Services->Microblog (Service)->Jisko (Plugin).
@@ -62,5 +64,3 @@ TODO: Login/passwords database? Where where we can store it? (KWallet?)
 
 Menda: KWallet would be good imho, but i don't know if we have more alternatives.
 
-
-http://img136.imageshack.us/img136/1555/diagrampe2.png
