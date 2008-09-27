@@ -63,4 +63,4 @@ TODO: Login/passwords database? Where where we can store it? (KWallet?)
 Menda: KWallet would be good imho, but i don't know if we have more alternatives.
 
 
-http://plexydesk.homelinux.org/~malcolm/diagram2.png
+http://img136.imageshack.us/img136/1555/diagrampe2.png
