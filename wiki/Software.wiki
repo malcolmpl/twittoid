@@ -29,8 +29,8 @@ http://img392.imageshack.us/img392/2097/itemqc6.png
 
 
 == !ConfigurationStorage ==
-  * Save all/selected ConfigItem.
-  * Load all/selected ConfigItem.
+  * Save all/selected !ConfigItem.
+  * Load all/selected !ConfigItem.
 
 
 == !ConfigItem ==
@@ -49,9 +49,6 @@ http://img174.imageshack.us/img174/5148/diagramxg2.png
   * Technologies: QT
 
 It has it's own UI. Maybe similar like Kopete for adding new TL's.
+Config will be stored through ConfigStorage.
 
-Plasma should help us to store preferences with KConfigGroup.
-
-TODO: Login/passwords database? Where where we can store it? (KWallet?)
-
-Menda: KWallet would be good imho, but i don't know if we have more alternatives.
+TODO: How do we store encrypted passwords?
