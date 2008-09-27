@@ -38,8 +38,8 @@ http://img256.imageshack.us/img256/8049/configitemxe0.png
 
 
 == !ConnectionManager ==
-  * Connects to website
-  * Returns data
+  * Connects to website.
+  * Returns unparsed data.
 
 == UI+Engine diagram ==
 http://img174.imageshack.us/img174/5148/diagramxg2.png
