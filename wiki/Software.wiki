@@ -26,7 +26,7 @@ This superclass will provide services for the different types of webservices we 
 == Item ==
 Item describes parsed data which the Engine sends to UI.
 
-http://www.airsoftvalley.com/s/item.png
+http://www.airsoftvalley.com/i/item.png
 
 
 == !ConfigurationStorage ==
@@ -35,7 +35,7 @@ http://www.airsoftvalley.com/s/item.png
 
 
 == !ConfigItem ==
-http://www.airsoftvalley.com/s/configitem.png
+http://www.airsoftvalley.com/i/configitem.png
 
 
 == !ConnectionManager ==
@@ -43,7 +43,7 @@ http://www.airsoftvalley.com/s/configitem.png
   * Returns unparsed data.
 
 == UI+Engine diagram ==
-http://www.airsoftvalley.com/s/diagram.png
+http://www.airsoftvalley.com/i/diagram.png
 
 ----
 = Config =
