@@ -44,6 +44,10 @@ http://www.airsoftvalley.com/i/configitem.png
   * Connects to website.
   * Returns unparsed data.
 
+== Custom Events system ==
+We need also that system to exchange beetwen plugins and engine.
+(in progress :)
+
 == UI+Engine diagram ==
 http://www.airsoftvalley.com/i/diagram.png
 
