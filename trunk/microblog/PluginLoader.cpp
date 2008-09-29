@@ -17,23 +17,9 @@
 *  along with twittoid. If not, see <http://www.gnu.org/licenses/lgpl.html>
 *******************************************************************************/
 
-#ifndef PLUGINLOADER_H_
-#define PLUGINLOADER_H_
+#include "PluginLoader.h"
 
-#include <QStringList>
-#include <QDir>
-
-class PluginLoader
+PluginLoader::PluginLoader()
 {
-public:
-    /**
-    * Scans for plugins
-    */
-    PluginLoader();
-    ~PluginLoader();
 
-private:
-    QStringList plugins;
-};
-
-#endif
+} 
