@@ -45,6 +45,7 @@ namespace MicroBlogEngine
 
     ConfigurationTO::~ConfigurationTO()
     {
+        delete d;
     }
     
     QString ConfigurationTO::getLogin()
