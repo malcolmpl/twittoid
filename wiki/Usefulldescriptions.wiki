@@ -1,6 +1,8 @@
 === Json Parsers: ===
 http://git.fredemmott.co.uk/?p=JsonQt;a=summary
 
+http://jsoncpp.sourceforge.net/
+
 ===Twitter & Twitter-likes API:===
 
 - http://apiwiki.twitter.com/
