@@ -31,9 +31,14 @@ public:
     */
     PluginLoader();
     ~PluginLoader();
+    QStringList getPluginsList();
+    QString getCurrentPlugin();
+    void setCurrentPlugin(const QString &current_plugin_);
+    
 
 private:
     QStringList plugins;
+    QString current_plugin;
 };
 
 #endif
