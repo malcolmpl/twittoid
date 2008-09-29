@@ -47,16 +47,67 @@ namespace MicroBlogEngine
 
     MicroblogItem::~MicroblogItem()
     {
+        delete d;
     }
     
-    GUID MicroblogItem::Id()
+    GUID MicroblogItem::Id() const
     {
         return d->m_id;
     }
     
-    QDateTime MicroblogItem::time()
+    void MicroblogItem::Id(const GUID &val)
+    {
+        d->m_id = val;
+    }
+    
+    QDateTime MicroblogItem::time() const
     {
         return d->m_time;
+    }
+    
+    void MicroblogItem::time(const QDateTime &val)
+    {
+        d->m_time = val;
+    }
+    
+    QString MicroblogItem::from() const
+    {
+        return d->m_from;
+    }
+    
+    void MicroblogItem::from(const QString &val)
+    {
+        d->m_from = val;
+    }
+        
+    QString MicroblogItem::who() const
+    {
+        return d->m_who;
+    }
+    
+    void MicroblogItem::who(const QString &val)
+    {
+        d->m_who = val;
+    }
+    
+    QImage MicroblogItem::picture() const
+    {
+        return d->m_picture;
+    }
+    
+    void MicroblogItem::picture(const QImage &val)
+    {
+        d->m_picture = val;
+    }
+    
+    QString MicroblogItem::message() const
+    {
+        return d->m_message;
+    }
+    
+    void MicroblogItem::message(const QString &val)
+    {
+        d->m_message = val;
     }
 
 }

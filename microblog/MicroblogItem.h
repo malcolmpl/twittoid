@@ -23,6 +23,8 @@
 #include "ItemInterface.h"
 #include <config.h>
 
+class QImage;
+
 namespace MicroBlogEngine
 {
 
@@ -32,8 +34,23 @@ namespace MicroBlogEngine
 	    MicroblogItem();
 	    virtual ~MicroblogItem();
         
-        GUID Id();
-        QDateTime time();
+        GUID Id() const;
+        void Id(const GUID &val);
+        
+        QDateTime time() const;
+        void time(const QDateTime &val);
+        
+        QString from() const;
+        void from(const QString &val);
+        
+        QString who() const;
+        void who(const QString &val);
+        
+        QImage picture() const;
+        void picture(const QImage &val);
+        
+        QString message() const;
+        void message(const QString &val);
         
     private:
         class Private;

@@ -35,5 +35,6 @@ namespace MicroBlogEngine
 
     ConfigurationStorage::~ConfigurationStorage()
     {
+        delete d;
     }
 };
