@@ -20,7 +20,7 @@ It is the main part of Twittoid. It's made up of these parts above:
 
 == !AbstractServices ==
 This superclass will provide services for the different types of webservices we have nowadays (Microblogging, Pictures, Online Calendars...).
-  === Plugin Loader (Microblog) ===
+  === !PluginLoader (Microblog) ===
   This will be the interface through we will be able to use plugins. Microblog will be the only class which manages Plugins, so another classes won't have direct access to plugins.
 
 == Item ==
