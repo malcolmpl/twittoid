@@ -26,6 +26,8 @@ This superclass will provide services for the different types of webservices we 
 == Item ==
 Item describes parsed data which the Engine sends to UI.
 
+Malcolm: i think its not the best place for this enum.
+
 http://www.airsoftvalley.com/i/item.png
 
 
