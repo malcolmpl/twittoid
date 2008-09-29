@@ -17,6 +17,7 @@ set(microblog_SRCS
     ConfigurationTO.cpp
     ConfigurationStorage.cpp
     MicroblogItem.cpp
+    PluginLoader.cpp
 )
 
 add_library(microblog SHARED ${microblog_SRCS}) 
