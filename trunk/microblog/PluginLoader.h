@@ -23,22 +23,18 @@
 #include <QStringList>
 #include <QDir>
 
-class PluginLoader
+class PluginLoader : public QObject
 {
+    Q_OBJECT
+
 public:
-    /**
-    * Scans for plugins
-    */
     PluginLoader();
-    ~PluginLoader();
+    virtual ~PluginLoader();
     QStringList getPluginsList();
-    QString getCurrentPlugin();
-    void setCurrentPlugin(const QString &current_plugin_);
-    
 
 private:
-    QStringList plugins;
-    QString current_plugin;
+    class Private;
+    Private * const d;
 };
 
 #endif
