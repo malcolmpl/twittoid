@@ -21,9 +21,5 @@
 
 PluginLoader::PluginLoader()
 {
-    QDir dir("plugins");
-    QStringList h_filters;
-    h_filters << "*.h";
-    plugins = dir.entryList(h_filters, QDir::Files | QDir::Readable);
     
 } 
