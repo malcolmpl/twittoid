@@ -19,7 +19,47 @@
 
 #include "PluginLoader.h"
 
+class PluginLoader::Private
+{
+public:
+    Private() {}
+    ~Private() {}
+    QString prefix; // program's folder
+};
+
 PluginLoader::PluginLoader()
+: d(new Private)
 {
     
 } 
+
+
+PluginLoader * PluginLoader::getInstance()
+{
+    if (!mInstance) {
+        mInstance = new PluginLoader();
+        mInstance->scanDisk();
+    }
+
+    return (mInstance);
+}
+
+
+void PluginLoader::scanDisk()
+{
+    QDir dir(d->prefix);
+    dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dir.setSorting(QDir::Size | QDir::Reversed);
+
+    QFileInfoList list = dir.entryInfoList();
+    for (int i = 0; i < list.size(); ++i) {
+        QFileInfo fileInfo = list.at(i);
+        loadDesktop(d->prefix + fileInfo.fileName());
+    }
+}
+
+
+QStringList PluginLoader::listPlugins()
+{
+    return (groups.keys());
+}

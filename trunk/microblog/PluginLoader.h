@@ -30,11 +30,14 @@ class PluginLoader : public QObject
 public:
     PluginLoader();
     virtual ~PluginLoader();
-    QStringList getPluginsList();
+    static PluginLoader *getInstance();
+    void scanDisk();
+    QStringList listPlugins();
 
 private:
     class Private;
-    Private * const d;
+    Private *const d;
+    static PluginLoader *mInstance;
 };
 
 #endif
