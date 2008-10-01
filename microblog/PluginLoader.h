@@ -22,6 +22,7 @@
 
 #include <QStringList>
 #include <QDir>
+#include "PluginInterface.h"
 
 class PluginLoader : public QObject
 {
@@ -33,6 +34,8 @@ public:
     static PluginLoader *getInstance();
     void scanDisk();
     QStringList listPlugins();
+    
+    typedef QHash <QString, PluginInterface*> Interface;
 
 private:
     class Private;

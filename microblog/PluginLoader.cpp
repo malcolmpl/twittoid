@@ -25,6 +25,7 @@ public:
     Private() {}
     ~Private() {}
     QString prefix; // program's folder
+    //PluginLoader::Interface groups;
 };
 
 PluginLoader::PluginLoader()
@@ -32,6 +33,12 @@ PluginLoader::PluginLoader()
 {
     
 } 
+
+
+PluginLoader::~PluginLoader()
+{
+    delete d;
+}
 
 
 PluginLoader * PluginLoader::getInstance()
@@ -54,12 +61,12 @@ void PluginLoader::scanDisk()
     QFileInfoList list = dir.entryInfoList();
     for (int i = 0; i < list.size(); ++i) {
         QFileInfo fileInfo = list.at(i);
-        loadDesktop(d->prefix + fileInfo.fileName());
+        //loadDesktop(d->prefix + fileInfo.fileName());
     }
 }
 
 
 QStringList PluginLoader::listPlugins()
 {
-    return (groups.keys());
+    //return (d->groups.keys());
 }
