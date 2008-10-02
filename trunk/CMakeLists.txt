@@ -7,10 +7,10 @@ cmake_minimum_required(VERSION 2.6)
 ADD_DEFINITIONS (${QT_DEFINITIONS})
 
 INCLUDE_DIRECTORIES (
-        ${CMAKE_SOURCE_DIR}
-        ${CMAKE_BINARY_DIR}
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}
 	${CMAKE_SOURCE_DIR}/microblog
 	${QT_INCLUDE_DIR}
-        )
+)
 
 add_subdirectory(microblog)
