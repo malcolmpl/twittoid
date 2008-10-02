@@ -25,7 +25,7 @@ public:
     Private() {}
     ~Private() {}
     QString prefix; // program's folder
-    //PluginLoader::Interface groups;
+    Interface groups;
 };
 
 PluginLoader::PluginLoader()
@@ -41,14 +41,14 @@ PluginLoader::~PluginLoader()
 }
 
 
-PluginLoader * PluginLoader::getInstance()
+PluginLoader *PluginLoader::getInstance()
 {
     if (!mInstance) {
         mInstance = new PluginLoader();
         mInstance->scanDisk();
     }
 
-    return (mInstance);
+    return(mInstance);
 }
 
 
@@ -68,5 +68,32 @@ void PluginLoader::scanDisk()
 
 QStringList PluginLoader::listPlugins()
 {
-    //return (d->groups.keys());
+    return(d->groups.keys());
+}
+
+
+PluginInterface *PluginLoader::instance(const QString &name)
+{
+    if (d->groups.contains(name)) {
+        return(d->groups[name]->instance());
+    } else {
+        return(0);
+    }
+}
+
+
+void PluginLoader::load(const QString &pluginName)
+{
+    //QPluginLoader loader(applicationDirPath() + "/lib/" + pluginName + ".so");
+    QPluginLoader loader("lib/" + pluginName + ".so");
+    QObject *plugin = loader.instance();
+
+    if (plugin) {
+        PluginInterface *iface = 0;
+        iface = qobject_cast<PluginInterface *> (plugin);
+        d->groups[pluginName] = iface;
+        qDebug() << "PluginLoader::load" << "Loading " << pluginName << ".." << endl;
+    } else {
+        qDebug() << loader.errorString() << endl;
+    }
 }

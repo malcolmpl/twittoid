@@ -23,10 +23,12 @@
 /**
 * All plugins made should inherit this class
 */
-class PluginInterface
+class PluginInterface : public QObject
 {
+    Q_OBJECT
+
 public:
-    
+    PluginInterface *instance();
 
 private:
 };
