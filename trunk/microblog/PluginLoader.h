@@ -27,6 +27,8 @@
 #include <QStringList>
 #include "PluginInterface.h"
 
+namespace MicroBlogEngine {
+
 /**
 * This class loads plugins like twitter, blip or jisko
 */
@@ -50,5 +52,7 @@ private:
     Private *d;
     static PluginLoader *mInstance;
 };
+
+} // namespace end
 
 #endif

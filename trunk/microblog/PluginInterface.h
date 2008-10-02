@@ -20,6 +20,9 @@
 #ifndef PLUGININTERFACE_H_
 #define PLUGININTERFACE_H_
 
+
+namespace MicroBlogEngine {
+
 /**
 * All plugins made should inherit this class
 */
@@ -29,8 +32,12 @@ class PluginInterface : public QObject
 
 public:
     PluginInterface *instance();
+    virtual void getFriendsTimeline();
+    virtual void login(const QString &username, const QString &password);
 
 private:
 };
+
+} // namespace end
 
 #endif
