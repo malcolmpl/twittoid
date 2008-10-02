@@ -6,7 +6,7 @@ http://jsoncpp.sourceforge.net/
 ===Twitter & Twitter-likes API:===
 
 - http://apiwiki.twitter.com/
- C++ Twitter library: http://code.google.com/p/twitlib
+C++ Twitter library: http://code.google.com/p/twitlib
 
 - http://www.blip.pl/api-0.02.html (Polish)
 
