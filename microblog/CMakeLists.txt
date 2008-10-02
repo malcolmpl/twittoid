@@ -10,7 +10,7 @@ include_directories(
     ${CMAKE_BINARY_DIR}
     ${QT_INCLUDE_DIR}
     ${QT_INCLUDES}
-    )
+)
  
 # We add our source code here
 set(microblog_SRCS
