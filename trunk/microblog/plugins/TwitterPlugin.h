@@ -20,9 +20,11 @@
 #ifndef PLUGININTERFACE_H_
 #define PLUGININTERFACE_H_
 
-class TwitterPlugin : public MicroBlogEngine::PluginInterface
+class TwitterPlugin
 {
+    public:
 
+    private:
 };
-kkjkjk
+
 #endif 
