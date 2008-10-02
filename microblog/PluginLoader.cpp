@@ -19,6 +19,8 @@
 
 #include "PluginLoader.h"
 
+namespace MicroBlogEngine {
+
 class PluginLoader::Private
 {
 public:
@@ -97,3 +99,5 @@ void PluginLoader::load(const QString &pluginName)
         qDebug() << loader.errorString() << endl;
     }
 }
+
+} // namespace end
