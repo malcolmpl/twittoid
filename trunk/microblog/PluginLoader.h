@@ -20,10 +20,16 @@
 #ifndef PLUGINLOADER_H_
 #define PLUGINLOADER_H_
 
-#include <QStringList>
+#include <QDebug>
 #include <QDir>
+#include <QHash>
+#include <QPluginLoader>
+#include <QStringList>
 #include "PluginInterface.h"
 
+/**
+* This class loads plugins like twitter, blip or jisko
+*/
 class PluginLoader : public QObject
 {
     Q_OBJECT
@@ -34,12 +40,14 @@ public:
     static PluginLoader *getInstance();
     void scanDisk();
     QStringList listPlugins();
-    
+    PluginInterface *instance(const QString &pluginName);
+    void load(const QString &pluginName);
+
     typedef QHash <QString, PluginInterface*> Interface;
 
 private:
     class Private;
-    Private *const d;
+    Private *d;
     static PluginLoader *mInstance;
 };
 
