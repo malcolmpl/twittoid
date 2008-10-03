@@ -32,7 +32,7 @@ namespace MicroBlogEngine
     {
     public:
 	    MicroblogItem();
-	    virtual ~MicroblogItem();
+	    ~MicroblogItem();
         
         GUID Id() const;
         void Id(const GUID &val);

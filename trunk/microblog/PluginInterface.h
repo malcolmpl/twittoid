@@ -20,23 +20,19 @@
 #ifndef PLUGININTERFACE_H_
 #define PLUGININTERFACE_H_
 
-
 namespace MicroBlogEngine {
 
 /**
 * All plugins made should inherit this class
 */
-class PluginInterface : public QObject
-{
-    Q_OBJECT
-
-public:
-    PluginInterface *instance();
-    virtual void getFriendsTimeline();
-    virtual void login(const QString &username, const QString &password);
-
-private:
-};
+    class PluginInterface
+    {
+    public:
+        PluginInterface() {};
+        virtual PluginInterface *instance() = 0;
+        virtual void getFriendsTimeline() = 0;
+        virtual void login(const QString &username, const QString &password) = 0;
+    };
 
 } // namespace end
 
