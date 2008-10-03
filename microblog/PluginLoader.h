@@ -29,29 +29,31 @@
 
 namespace MicroBlogEngine {
 
-/**
-* This class loads plugins like twitter, blip or jisko
-*/
-class PluginLoader : public QObject
-{
-    Q_OBJECT
+    /**
+    * This class loads plugins like twitter, blip or jisko
+    */
+    class PluginLoader : public QObject
+    {
+        Q_OBJECT
 
-public:
-    PluginLoader();
-    virtual ~PluginLoader();
-    static PluginLoader *getInstance();
-    void scanDisk();
-    QStringList listPlugins();
-    PluginInterface *instance(const QString &pluginName);
-    void load(const QString &pluginName);
+    public:
+        PluginLoader();
+        virtual ~PluginLoader();
+        static PluginLoader *getInstance();
+        void scanDisk();
+        QStringList listPlugins();
+        PluginInterface *instance(const QString &pluginName);
+        void load(const QString &pluginName);
 
-    typedef QHash <QString, PluginInterface*> Interface;
+        typedef QHash <QString, PluginInterface*> Interface;
 
-private:
-    class Private;
-    Private *d;
-    static PluginLoader *mInstance;
-};
+    private:
+        class Private;
+        Private *d;
+        static PluginLoader *mInstance;
+    };
+
+    PluginLoader *PluginLoader::mInstance = 0;
 
 } // namespace end
 

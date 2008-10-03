@@ -17,14 +17,17 @@ set(microblog_SRCS
     ConfigurationTO.cpp
     ConfigurationStorage.cpp
     MicroblogItem.cpp
-    PluginLoader.cpp
+	PluginLoader.cpp
 )
+
+qt4_automoc(${microblog_SRCS})
 
 add_library(microblog SHARED ${microblog_SRCS}) 
 
 target_link_libraries(
     microblog
     ${QT_QTCORE_LIBRARY}
+	${QT_QTGUI_LIBRARY}
     )
 
 install(TARGETS microblog DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/)

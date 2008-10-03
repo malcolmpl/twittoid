@@ -30,11 +30,10 @@ namespace MicroBlogEngine
     class VISIBLE_SYM ItemInterface
     {
     public:
-        ItemInterface();
-        virtual ~ItemInterface();
+        virtual ~ItemInterface() {};
 
-        virtual GUID Id();
-        virtual QDateTime time();
+        virtual GUID Id() = 0;
+        virtual QDateTime time() = 0;
     };
 
 }

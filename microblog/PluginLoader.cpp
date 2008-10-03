@@ -92,12 +92,20 @@ void PluginLoader::load(const QString &pluginName)
 
     if (plugin) {
         PluginInterface *iface = 0;
-        iface = qobject_cast<PluginInterface *> (plugin);
+        iface = dynamic_cast<PluginInterface *> (plugin);
+        if(iface == NULL)
+        {
+            qDebug() << "Error loading plugin." << endl;
+            return;
+        }
+
         d->groups[pluginName] = iface;
         qDebug() << "PluginLoader::load" << "Loading " << pluginName << ".." << endl;
     } else {
         qDebug() << loader.errorString() << endl;
     }
 }
+
+#include "pluginloader.moc"
 
 } // namespace end
