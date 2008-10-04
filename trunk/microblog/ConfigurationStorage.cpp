@@ -18,14 +18,25 @@
 *******************************************************************************/
 
 #include "ConfigurationStorage.h"
+#include <typedefs.h>
+#include <QSettings>
 
 namespace MicroBlogEngine
 {
     class ConfigurationStorage::Private
     {
         public:
-            Private() {}
-            ~Private() {}
+            Private()
+            {
+                settings = new QSettings(QSettings::IniFormat, QSettings::UserScope,
+                    "Twittoid", "MicroBlog");
+            }
+            ~Private()
+            {
+                delete settings;
+            }
+
+            QSettings *settings;
     };
     
     ConfigurationStorage::ConfigurationStorage()
@@ -36,5 +47,27 @@ namespace MicroBlogEngine
     ConfigurationStorage::~ConfigurationStorage()
     {
         delete d;
+    }
+
+    ConfigurationTO ConfigurationStorage::load(const QUuid& id) const
+    {
+        QString pluginId = id.toString() + "/";
+        ConfigurationTO config;
+        QUuid bla(d->settings->value(pluginId + "pluginId").toString());
+        config.setPluginId(bla);
+        config.setLogin(d->settings->value(pluginId + "login").toString());
+        config.setPassword(d->settings->value(pluginId + "password").toString());
+        config.setWebsiteUrl(d->settings->value(pluginId + "websiteUrl").toString());
+
+        return config;
+    }
+
+    void ConfigurationStorage::save(const ConfigurationTO &val)
+    {
+        QString pluginId = val.getPluginId() + "/";
+        d->settings->setValue(pluginId + "pluginId", val.getPluginId().toString());
+        d->settings->setValue(pluginId + "login", val.getLogin());
+        d->settings->setValue(pluginId + "password", val.getLogin());
+        d->settings->setValue(pluginId + "websiteUrl", val.getWebsiteUrl());
     }
 };

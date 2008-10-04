@@ -21,7 +21,7 @@
 #define CONFIGURATIONTO_H_
 
 class QString;
-class GUID;
+#include <QUuid>
 
 namespace MicroBlogEngine
 {
@@ -37,8 +37,8 @@ namespace MicroBlogEngine
         void setPassword(const QString &val);
         QString getWebsiteUrl() const;
         void setWebsiteUrl(const QString &val);
-        GUID getPluginId() const;
-        void setPluginId(const GUID &val);
+        QUuid getPluginId() const;
+        void setPluginId(const QUuid &val);
         
     private:
         class Private;

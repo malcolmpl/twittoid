@@ -19,6 +19,7 @@
 
 #include "typedefs.h"
 #include <QString>
+#include <QUuid>
 
 #include "ConfigurationTO.h"
 
@@ -34,7 +35,7 @@ namespace MicroBlogEngine
             QString m_password;
             QString m_websiteUrl;
             
-            GUID m_pluginID;
+            QUuid m_pluginID;
     };
     
     
@@ -78,12 +79,12 @@ namespace MicroBlogEngine
         d->m_websiteUrl = val;
     }
     
-    GUID ConfigurationTO::getPluginId() const
+    QUuid ConfigurationTO::getPluginId() const
     {
         return d->m_pluginID;
     }
     
-    void ConfigurationTO::setPluginId(const GUID &val)
+    void ConfigurationTO::setPluginId(const QUuid &val)
     {
         d->m_pluginID = val;
     }

@@ -24,6 +24,7 @@
 #include "typedefs.h"
 
 #include <QDateTime>
+#include <QUuid>
 
 namespace MicroBlogEngine
 {
@@ -32,7 +33,7 @@ namespace MicroBlogEngine
     public:
         virtual ~ItemInterface() {};
 
-        virtual GUID Id() = 0;
+        virtual QUuid Id() = 0;
         virtual QDateTime time() = 0;
     };
 
