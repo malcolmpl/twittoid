@@ -30,6 +30,9 @@ namespace MicroBlogEngine
     public:
         ConfigurationStorage();
         virtual ~ConfigurationStorage();
+
+        ConfigurationTO load(const QUuid& id) const;
+        void save(const ConfigurationTO &val);
     
     private:
         class Private;

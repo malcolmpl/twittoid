@@ -24,7 +24,7 @@
 
 namespace MicroBlogEngine
 {
-    typedef QString GUID;
+
 }
 
 #endif /*TYPEDEFS_H_*/
