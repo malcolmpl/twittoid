@@ -48,42 +48,42 @@ namespace MicroBlogEngine
         delete d;
     }
     
-    QString ConfigurationTO::getLogin()
+    QString ConfigurationTO::getLogin() const
     {
         return d->m_login;
     }
 
-    void ConfigurationTO::setLogin(QString val)
+    void ConfigurationTO::setLogin(const QString &val)
     {
         d->m_login = val;
     }
         
-    QString ConfigurationTO::getPassword()
+    QString ConfigurationTO::getPassword() const
     {
         return d->m_password;
     }
 
-    void ConfigurationTO::setPassword(QString val)
+    void ConfigurationTO::setPassword(const QString &val)
     {
         d->m_password = val;
     }
 
-    QString ConfigurationTO::getWebsiteUrl()
+    QString ConfigurationTO::getWebsiteUrl() const
     {
         return d->m_websiteUrl;
     }
 
-    void ConfigurationTO::setWebsiteUrl(QString val)
+    void ConfigurationTO::setWebsiteUrl(const QString &val)
     {
         d->m_websiteUrl = val;
     }
     
-    GUID ConfigurationTO::getPluginId()
+    GUID ConfigurationTO::getPluginId() const
     {
         return d->m_pluginID;
     }
     
-    void ConfigurationTO::setPluginId(GUID val)
+    void ConfigurationTO::setPluginId(const GUID &val)
     {
         d->m_pluginID = val;
     }

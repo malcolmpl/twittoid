@@ -31,14 +31,14 @@ namespace MicroBlogEngine
         ConfigurationTO();
         virtual ~ConfigurationTO();
         
-        QString getLogin();
-        void setLogin(QString val);
-        QString getPassword();
-        void setPassword(QString val);
-        QString getWebsiteUrl();
-        void setWebsiteUrl(QString val);
-        GUID getPluginId();
-        void setPluginId(GUID val);
+        QString getLogin() const;
+        void setLogin(const QString &val);
+        QString getPassword() const;
+        void setPassword(const QString &val);
+        QString getWebsiteUrl() const;
+        void setWebsiteUrl(const QString &val);
+        GUID getPluginId() const;
+        void setPluginId(const GUID &val);
         
     private:
         class Private;
