@@ -10,7 +10,9 @@ INCLUDE_DIRECTORIES (
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}
 	${CMAKE_SOURCE_DIR}/microblog
+	${CMAKE_SOURCE_DIR}/tests/configurationto
 	${QT_INCLUDE_DIR}
 )
 
 add_subdirectory(microblog)
+add_subdirectory(tests/configurationto)
