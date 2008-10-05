@@ -2,8 +2,6 @@ project(test_configurationto)
 
 INCLUDE_DIRECTORIES(
 	   ${QT_INCLUDES}
-#	   ${QT_QTCORE_INCLUDE_DIR}
-#	   ${QT_QTTEST_INCLUDE_DIR}
 		 )
 
 SET (test_configurationto_SRC
@@ -22,5 +20,3 @@ TARGET_LINK_LIBRARIES(
        )
 
 ADD_TEST( configurationtotest ${CMAKE_CURRENT_BINARY_DIR}/tests/test_configurationto )
-
-#INSTALL(TARGETS configurationto DESTINATION ${CMAKE_INSTALL_PREFIX}/bin/tests)
