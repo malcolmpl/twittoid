@@ -11,5 +11,4 @@ set (
 
 target_link_libraries (
     plugins
-    ${QT_QTSQL_LIBRARY}
 )
