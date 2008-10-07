@@ -21,7 +21,7 @@
 #define PLUGININTERFACE_H_
 
 #include <PluginInterface>
-vcxxx
+
 class TwitterPlugin
 {
     public:
