@@ -55,6 +55,6 @@ namespace MicroBlogEngine {
 
     PluginLoader *PluginLoader::mInstance = 0;
 
-} // namespace end
+}
 
 #endif

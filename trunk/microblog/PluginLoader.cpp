@@ -86,7 +86,6 @@ PluginInterface *PluginLoader::instance(const QString &name)
 
 void PluginLoader::load(const QString &pluginName)
 {
-    //QPluginLoader loader(applicationDirPath() + "/lib/" + pluginName + ".so");
     QPluginLoader loader("lib/" + pluginName + ".so");
     QObject *plugin = loader.instance();
 
