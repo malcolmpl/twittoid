@@ -20,9 +20,15 @@
 #ifndef PLUGININTERFACE_H_
 #define PLUGININTERFACE_H_
 
+#include <PluginInterface>
+vcxxx
 class TwitterPlugin
 {
     public:
+        PluginInterface() {};
+        PluginInterface *instance();
+        void getFriendsTimeline();
+        void login(const QString &username, const QString &password);
 
     private:
 };
