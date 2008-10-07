@@ -23,6 +23,7 @@ set(microblog_SRCS
 qt4_automoc(${microblog_SRCS})
 
 add_library(microblog SHARED ${microblog_SRCS}) 
+add_subdirectory(plugins)
 
 target_link_libraries(
     microblog
