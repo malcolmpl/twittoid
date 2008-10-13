@@ -17,20 +17,21 @@
 *  along with twittoid. If not, see <http://www.gnu.org/licenses/lgpl.html>
 *******************************************************************************/
 
-#ifndef PLUGININTERFACE_H_
-#define PLUGININTERFACE_H_
+#ifndef TWITTERPLUGIN_H_
+#define TWITTERPLUGIN_H_
 
-#include <PluginInterface>
+#include <PluginInterface.h>
+#include <config.h>
 
-class TwitterPlugin
+class VISIBLE_SYM TwitterPlugin : public MicroBlogEngine::PluginInterface
 {
     public:
-        PluginInterface() {};
-        PluginInterface *instance();
+        TwitterPlugin() {};
+        MicroBlogEngine::PluginInterface *instance();
         void getFriendsTimeline();
         void login(const QString &username, const QString &password);
 
     private:
 };
 
-#endif 
+#endif //TWITTERPLUGIN_H_

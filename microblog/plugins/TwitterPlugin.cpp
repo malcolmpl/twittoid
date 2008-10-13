@@ -18,3 +18,19 @@
 *******************************************************************************/
 
 #include "TwitterPlugin.h"
+
+MicroBlogEngine::PluginInterface *TwitterPlugin::instance()
+{
+    return NULL;
+}
+
+void TwitterPlugin::getFriendsTimeline()
+{
+
+}
+
+void TwitterPlugin::login(const QString &username, const QString &password)
+{
+
+}
+

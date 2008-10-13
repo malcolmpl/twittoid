@@ -15,4 +15,5 @@ INCLUDE_DIRECTORIES (
 )
 
 add_subdirectory(microblog)
+add_subdirectory(microblog/plugins)
 add_subdirectory(tests/configurationto)
