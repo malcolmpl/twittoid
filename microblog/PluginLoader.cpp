@@ -19,91 +19,93 @@
 
 #include "PluginLoader.h"
 
+#include <QApplication>
+
 namespace MicroBlogEngine {
 
-class PluginLoader::Private
-{
-public:
-    Private() {}
-    ~Private() {}
-    QString prefix; // program's folder
-    Interface groups;
-};
+    PluginLoader *PluginLoader::mInstance = 0;
 
-PluginLoader::PluginLoader()
-: d(new Private)
-{
-    
-} 
+    class PluginLoader::Private
+    {
+    public:
+        Private() {}
+        ~Private() {}
+        QString prefix; // program's folder
+        Interface groups;
+    };
 
-
-PluginLoader::~PluginLoader()
-{
-    delete d;
-}
+    PluginLoader::PluginLoader()
+        : d(new Private)
+    {
+        d->prefix = QApplication::applicationDirPath();
+    } 
 
 
-PluginLoader *PluginLoader::getInstance()
-{
-    if (!mInstance) {
-        mInstance = new PluginLoader();
-        mInstance->scanDisk();
+    PluginLoader::~PluginLoader()
+    {
+        delete d;
     }
 
-    return(mInstance);
-}
+    void PluginLoader::scanDisk()
+    {
+        QDir dir(d->prefix);
+        dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+        dir.setSorting(QDir::Size | QDir::Reversed);
 
-
-void PluginLoader::scanDisk()
-{
-    QDir dir(d->prefix);
-    dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
-    dir.setSorting(QDir::Size | QDir::Reversed);
-
-    QFileInfoList list = dir.entryInfoList();
-    for (int i = 0; i < list.size(); ++i) {
-        QFileInfo fileInfo = list.at(i);
-        //loadDesktop(d->prefix + fileInfo.fileName());
-    }
-}
-
-
-QStringList PluginLoader::listPlugins()
-{
-    return(d->groups.keys());
-}
-
-
-PluginInterface *PluginLoader::instance(const QString &name)
-{
-    if (d->groups.contains(name)) {
-        return(d->groups[name]->instance());
-    } else {
-        return(0);
-    }
-}
-
-
-void PluginLoader::load(const QString &pluginName)
-{
-    QPluginLoader loader("lib/" + pluginName + ".so");
-    QObject *plugin = loader.instance();
-
-    if (plugin) {
-        PluginInterface *iface = 0;
-        iface = dynamic_cast<PluginInterface *> (plugin);
-        if(iface == NULL)
-        {
-            qDebug() << "Error loading plugin." << endl;
-            return;
+        QFileInfoList list = dir.entryInfoList();
+        for (int i = 0; i < list.size(); ++i) {
+            QFileInfo fileInfo = list.at(i);
+            load(d->prefix + "/" + fileInfo.fileName());
         }
-
-        d->groups[pluginName] = iface;
-        qDebug() << "PluginLoader::load" << "Loading " << pluginName << ".." << endl;
-    } else {
-        qDebug() << loader.errorString() << endl;
     }
-}
+
+    QStringList PluginLoader::listPlugins()
+    {
+        return(d->groups.keys());
+    }
+
+
+    PluginInterface *PluginLoader::instance(const QString &name)
+    {
+        if (d->groups.contains(name)) {
+            return(d->groups[name]->instance());
+        } else {
+            return(0);
+        }
+    }
+
+
+    void PluginLoader::load(const QString &pluginName)
+    {
+#ifdef Q_WS_MAC
+        QPluginLoader loader(pluginName + ".dylib");
+#endif
+
+#ifdef Q_WS_X11
+        QPluginLoader loader(pluginName + ".so");
+#endif
+
+#ifdef Q_WS_WIN
+        QPluginLoader loader(pluginName + ".dll");
+#endif
+
+        QObject *plugin = loader.instance();
+
+        if (plugin) {
+            PluginInterface *iface = 0;
+            iface = dynamic_cast<PluginInterface *> (plugin);
+            if(iface == NULL)
+            {
+                qDebug() << "Error loading plugin." << endl;
+                return;
+            }
+
+            d->groups[pluginName] = iface;
+            qDebug() << "PluginLoader::load" << "Loading " << pluginName << ".." << endl;
+        } else {
+            qDebug() << loader.errorString() << endl;
+        }
+    }
 
 #include "pluginloader.moc"
 

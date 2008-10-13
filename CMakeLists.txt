@@ -16,4 +16,6 @@ INCLUDE_DIRECTORIES (
 
 add_subdirectory(microblog)
 add_subdirectory(microblog/plugins)
+add_subdirectory(twittoid)
+add_subdirectory(jsoncpp)
 add_subdirectory(tests/configurationto)
