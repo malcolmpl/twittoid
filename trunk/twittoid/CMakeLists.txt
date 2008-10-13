@@ -1,24 +1,25 @@
 project(twittoid)
 
-INCLUDE_DIRECTORIES(
-	   ${QT_INCLUDES}
-	   ${QT_CORE_INCLUDE_DIR}
-	   ${QT_QTNETWORK_INCLUDE_DIR}
-		 )
+add_definitions (${QT_DEFINITIONS})
 
-SET (twittoid_MOC
-    connector.cpp
-    )
-    
+include_directories(
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}
+    ${QT_INCLUDE_DIR}
+    ${QT_INCLUDES}
+)
+
 SET (twittoid_SRC
+	main.cpp
+	${CMAKE_SOURCE_DIR}/microblog/pluginloader.cpp
 		)
 
-QT4_AUTOMOC( ${twittoid_MOC}) 
-ADD_EXECUTABLE(twittoid ${twittoid_SRC} ${twittoid_MOC})
+QT4_AUTOMOC( ${twittoid_SRC}) 
+ADD_EXECUTABLE(twittoid ${twittoid_SRC})
 
 TARGET_LINK_LIBRARIES(
         twittoid
-        jsoncpp
+		microblog
         ${QT_QTGUI_LIBRARY}
         ${QT_QTCORE_LIBRARY}
         ${QT_QTNETWORK_LIBRARY}
