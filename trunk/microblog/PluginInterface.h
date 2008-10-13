@@ -20,6 +20,8 @@
 #ifndef PLUGININTERFACE_H_
 #define PLUGININTERFACE_H_
 
+#include <QString>
+
 namespace MicroBlogEngine {
 
 /**

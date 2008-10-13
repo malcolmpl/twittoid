@@ -1,8 +1,6 @@
 # Project needs a name of course
 project(microblog)
 
-cmake_minimum_required(VERSION 2.6)
-
 add_definitions (${QT_DEFINITIONS})
 
 include_directories(
@@ -23,7 +21,6 @@ set(microblog_SRCS
 qt4_automoc(${microblog_SRCS})
 
 add_library(microblog SHARED ${microblog_SRCS}) 
-add_subdirectory(plugins)
 
 target_link_libraries(
     microblog
