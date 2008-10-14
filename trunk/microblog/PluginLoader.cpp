@@ -37,7 +37,7 @@ namespace MicroBlogEngine {
     PluginLoader::PluginLoader()
         : d(new Private)
     {
-        d->prefix = QApplication::applicationDirPath();
+        d->prefix = QApplication::applicationDirPath() + "/../lib/";
     } 
 
 
@@ -52,10 +52,14 @@ namespace MicroBlogEngine {
         dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
         dir.setSorting(QDir::Size | QDir::Reversed);
 
+        QStringList filters;
+        filters << "*.dll" << "*.dylib" << "*.so";
+        dir.setNameFilters(filters);
+
         QFileInfoList list = dir.entryInfoList();
         for (int i = 0; i < list.size(); ++i) {
             QFileInfo fileInfo = list.at(i);
-            load(d->prefix + "/" + fileInfo.fileName());
+            load(d->prefix + fileInfo.fileName());
         }
     }
 
@@ -77,17 +81,7 @@ namespace MicroBlogEngine {
 
     void PluginLoader::load(const QString &pluginName)
     {
-#ifdef Q_WS_MAC
-        QPluginLoader loader(pluginName + ".dylib");
-#endif
-
-#ifdef Q_WS_X11
-        QPluginLoader loader(pluginName + ".so");
-#endif
-
-#ifdef Q_WS_WIN
-        QPluginLoader loader(pluginName + ".dll");
-#endif
+        QPluginLoader loader(pluginName);
 
         QObject *plugin = loader.instance();
 
