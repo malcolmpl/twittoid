@@ -25,13 +25,14 @@
 
 class VISIBLE_SYM TwitterPlugin : public MicroBlogEngine::PluginInterface
 {
+    Q_OBJECT
+    Q_INTERFACES(MicroBlogEngine::PluginInterface)
+
     public:
         TwitterPlugin() {};
         MicroBlogEngine::PluginInterface *instance();
         void getFriendsTimeline();
         void login(const QString &username, const QString &password);
-
-    private:
 };
 
 #endif //TWITTERPLUGIN_H_

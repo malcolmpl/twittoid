@@ -18,10 +18,11 @@
 *******************************************************************************/
 
 #include "TwitterPlugin.h"
+#include <QtPlugin>
 
 MicroBlogEngine::PluginInterface *TwitterPlugin::instance()
 {
-    return NULL;
+    return this;
 }
 
 void TwitterPlugin::getFriendsTimeline()
@@ -33,4 +34,7 @@ void TwitterPlugin::login(const QString &username, const QString &password)
 {
 
 }
+
+Q_EXPORT_PLUGIN2(TwitterPlugin, TwitterPlugin)
+#include "twitterplugin.moc"
 

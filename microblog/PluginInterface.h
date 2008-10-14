@@ -21,21 +21,23 @@
 #define PLUGININTERFACE_H_
 
 #include <QString>
+#include <QObject>
 
-namespace MicroBlogEngine {
-
-/**
-* All plugins made should inherit this class
-*/
-    class PluginInterface
+namespace MicroBlogEngine
+{
+    /**
+    * All plugins made should inherit this class
+    */
+    class PluginInterface : public QObject
     {
     public:
-        PluginInterface() {};
+        virtual ~PluginInterface() {};
         virtual PluginInterface *instance() = 0;
         virtual void getFriendsTimeline() = 0;
         virtual void login(const QString &username, const QString &password) = 0;
     };
+}
 
-} // namespace end
+Q_DECLARE_INTERFACE(MicroBlogEngine::PluginInterface, "com.microblogengine.Plugin.PluginInterface/1.0");
 
 #endif
