@@ -8,13 +8,6 @@ set(sourceFiles
 
 set(QTMOC_SRCS
 	../microblog/MicroBlog.h
-	../microblog/PluginLoader.h
-)
-
-set(libs
-	${QT_QTGUI_LIBRARY}
-    ${QT_QTCORE_LIBRARY}
-    ${QT_QTNETWORK_LIBRARY}
 )
 
 qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
@@ -22,6 +15,12 @@ qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
 set(sourceFiles
 	${sourceFiles}
 	${QT_MOC_SRCS}
+)
+
+set(libs
+	${QT_QTGUI_LIBRARY}
+    ${QT_QTCORE_LIBRARY}
+    ${QT_QTNETWORK_LIBRARY}
 )
 
 include_directories(
