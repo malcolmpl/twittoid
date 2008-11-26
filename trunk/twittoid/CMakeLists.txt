@@ -2,6 +2,28 @@ project(twittoid)
 
 add_definitions (${QT_DEFINITIONS})
 
+set(sourceFiles
+	main.cpp
+)
+
+set(QTMOC_SRCS
+	../microblog/MicroBlog.h
+	../microblog/PluginLoader.h
+)
+
+set(libs
+	${QT_QTGUI_LIBRARY}
+    ${QT_QTCORE_LIBRARY}
+    ${QT_QTNETWORK_LIBRARY}
+)
+
+qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
+
+set(sourceFiles
+	${sourceFiles}
+	${QT_MOC_SRCS}
+)
+
 include_directories(
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}
@@ -9,20 +31,14 @@ include_directories(
     ${QT_INCLUDES}
 )
 
-SET (twittoid_SRC
-	main.cpp
-	${CMAKE_SOURCE_DIR}/microblog/pluginloader.cpp
-		)
+add_custom_target(twittoidmoc ALL DEPENDS ${QT_MOC_SRCS})
+add_executable(twittoid ${sourceFiles})
+add_dependencies(twittoid twittoidmoc)
 
-QT4_AUTOMOC( ${twittoid_SRC}) 
-ADD_EXECUTABLE(twittoid ${twittoid_SRC})
+target_link_libraries(
+	twittoid
+	microblog
+	${libs}
+)
 
-TARGET_LINK_LIBRARIES(
-        twittoid
-		microblog
-        ${QT_QTGUI_LIBRARY}
-        ${QT_QTCORE_LIBRARY}
-        ${QT_QTNETWORK_LIBRARY}
-       )
-
-INSTALL(TARGETS twittoid DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+install(TARGETS twittoid DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
