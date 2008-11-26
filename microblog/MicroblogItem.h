@@ -21,14 +21,13 @@
 #define MICROBLOGITEM_H_
 
 #include "ItemInterface.h"
-#include <config.h>
 
 class QImage;
 
 namespace MicroBlogEngine
 {
 
-    class VISIBLE_SYM MicroblogItem : public ItemInterface
+    class MicroblogItem : public ItemInterface
     {
     public:
 	    MicroblogItem();

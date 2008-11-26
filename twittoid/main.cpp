@@ -19,14 +19,13 @@
 
 #include <QtCore>
 #include <QApplication>
-#include <PluginLoader.h>
+#include <MicroBlog.h>
 
 int main( int argc, char ** argv )
 {
     QApplication app(argc,argv);
 
-    MicroBlogEngine::PluginLoader *loader = new MicroBlogEngine::PluginLoader();
-    loader->scanDisk();
+    MicroBlogPtr engine = MicroBlogPtr(new MicroBlog());
 
     return app.exec();
 }
