@@ -19,6 +19,7 @@ set(sourceFiles
 set(QTMOC_SRC
 	PluginLoader.h
 	MicroBlog.h
+	PluginInterface.h
 )
 
 include_directories(
@@ -49,4 +50,4 @@ target_link_libraries(
 	${libs}
     )
 
-install(TARGETS microblog DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/)
+install(TARGETS microblog DESTINATION ${CMAKE_INSTALL_PREFIX}/bin/)

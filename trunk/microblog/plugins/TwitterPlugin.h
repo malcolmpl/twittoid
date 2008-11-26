@@ -20,6 +20,7 @@
 #ifndef TWITTERPLUGIN_H_
 #define TWITTERPLUGIN_H_
 
+#include <QObject>
 #include <PluginInterface.h>
 #include <config.h>
 

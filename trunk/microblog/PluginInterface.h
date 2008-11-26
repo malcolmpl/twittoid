@@ -30,6 +30,7 @@ namespace MicroBlogEngine
     */
     class PluginInterface : public QObject
     {
+        Q_OBJECT
     public:
         virtual ~PluginInterface() {};
         virtual PluginInterface *instance() = 0;

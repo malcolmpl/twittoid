@@ -52,5 +52,3 @@ void TestConfigurationTO::pluginid()
 
 
 QTEST_MAIN(TestConfigurationTO)
-
-#include "test_configurationto.moc"

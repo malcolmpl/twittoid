@@ -36,5 +36,5 @@ void TwitterPlugin::login(const QString &username, const QString &password)
 }
 
 Q_EXPORT_PLUGIN2(TwitterPlugin, TwitterPlugin)
-#include "twitterplugin.moc"
+
 

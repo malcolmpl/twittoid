@@ -1,22 +1,37 @@
 project(test_configurationto)
 
-INCLUDE_DIRECTORIES(
+include_directories(
 	   ${QT_INCLUDES}
-		 )
+)
 
-SET (test_configurationto_SRC
+set(sourceFiles
 	test_configurationto.cpp
-	${CMAKE_SOURCE_DIR}/microblog/ConfigurationTO.cpp
-		)
+)
 
-QT4_AUTOMOC( ${test_configurationto_SRC}) 
-ADD_EXECUTABLE(test_configurationto ${test_configurationto_SRC})
+set(QTMOC_SRCS
+	test_configurationto.h
+)
 
-TARGET_LINK_LIBRARIES(
+qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
+
+set(sourceFiles
+	${sourceFiles}
+	${QT_MOC_SRCS}
+)
+
+set(libs
+    ${QT_QTCORE_LIBRARY}
+	${QT_QTTEST_LIBRARY}
+)
+
+add_custom_target(test_configurationtomoc ALL DEPENDS ${QT_MOC_SRCS})
+add_executable(test_configurationto ${sourceFiles})
+add_dependencies(test_configurationto test_configurationtomoc)
+
+target_link_libraries(
 		test_configurationto
 		microblog
-        ${QT_QTCORE_LIBRARY}
-        ${QT_QTTEST_LIBRARY}
+		${libs}
        )
 
-ADD_TEST( configurationtotest ${CMAKE_CURRENT_BINARY_DIR}/tests/test_configurationto )
+add_test( configurationtotest ${CMAKE_CURRENT_BINARY_DIR}/tests/test_configurationto )

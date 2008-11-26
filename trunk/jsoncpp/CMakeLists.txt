@@ -1,15 +1,15 @@
 project(jsoncpp)
 
-include( ${QT_USE_FILE})
+include( ${QT_USE_FILE} )
 
-INCLUDE_DIRECTORIES(
-	   ${QT_INCLUDES}
-	   ${QT_CORE_INCLUDE_DIR}
-	   ${QT_QTNETWORK_INCLUDE_DIR}
-     ${CMAKE_SOURCE_DIR}/jsoncpp
-		 )
+include_directories(
+		${QT_INCLUDES}
+		${QT_CORE_INCLUDE_DIR}
+		${QT_QTNETWORK_INCLUDE_DIR}
+		${CMAKE_SOURCE_DIR}/jsoncpp
+)
 
-SET (jsoncpp_SRC
+set (jsoncpp_SRC
     json_batchallocator.h
     json_internalarray.inl
     json_internalmap.inl
@@ -24,15 +24,19 @@ SET (jsoncpp_SRC
     json/reader.h
     json/value.h
     json/writer.h
-		)
+)
 
-ADD_LIBRARY(jsoncpp SHARED ${jsoncpp_SRC})
+set(libs
+	${QT_QTGUI_LIBRARY}
+    ${QT_QTCORE_LIBRARY}
+    ${QT_QTNETWORK_LIBRARY}
+)
 
-TARGET_LINK_LIBRARIES(
-        jsoncpp
-        ${QT_QTGUI_LIBRARY}
-        ${QT_QTCORE_LIBRARY}
-        ${QT_QTNETWORK_LIBRARY}
-       )
+add_library(jsoncpp SHARED ${jsoncpp_SRC})
+
+target_link_libraries(
+	jsoncpp
+	${libs}
+)
 
 INSTALL(TARGETS jsoncpp DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)

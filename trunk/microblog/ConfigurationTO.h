@@ -20,12 +20,14 @@
 #ifndef CONFIGURATIONTO_H_
 #define CONFIGURATIONTO_H_
 
+#include <config.h>
+
 class QString;
 #include <QUuid>
 
 namespace MicroBlogEngine
 {
-    class ConfigurationTO
+    class VISIBLE_SYM ConfigurationTO
     {
     public:
         ConfigurationTO();
