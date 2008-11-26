@@ -21,11 +21,10 @@
 #define CONFIGURATIONSTORAGE_H_
 
 #include "ConfigurationTO.h"
-#include <config.h>
 
 namespace MicroBlogEngine
 {
-    class VISIBLE_SYM ConfigurationStorage
+    class ConfigurationStorage
     {
     public:
         ConfigurationStorage();

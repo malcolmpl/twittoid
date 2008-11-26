@@ -26,14 +26,13 @@
 #include <QPluginLoader>
 #include <QStringList>
 #include "PluginInterface.h"
-#include <config.h>
 
-namespace MicroBlogEngine {
-
+namespace MicroBlogEngine
+{
     /**
     * This class loads plugins like twitter, blip or jisko
     */
-    class VISIBLE_SYM PluginLoader : public QObject
+    class PluginLoader : public QObject
     {
         Q_OBJECT
 
@@ -43,7 +42,8 @@ namespace MicroBlogEngine {
 
         static PluginLoader *getInstance()
         {
-            if (!mInstance) {
+            if (!mInstance)
+            {
                 mInstance = new PluginLoader();
                 mInstance->scanDisk();
             }
@@ -64,7 +64,7 @@ namespace MicroBlogEngine {
 #ifdef Q_WS_WIN
         static PluginLoader * mInstance;
 #else
-        static VISIBLE_SYM PluginLoader * mInstance;
+        static PluginLoader * mInstance;
 #endif
     };
 }

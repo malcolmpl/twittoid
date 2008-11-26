@@ -57,7 +57,8 @@ namespace MicroBlogEngine {
         dir.setNameFilters(filters);
 
         QFileInfoList list = dir.entryInfoList();
-        for (int i = 0; i < list.size(); ++i) {
+        for (int i = 0; i < list.size(); ++i)
+        {
             QFileInfo fileInfo = list.at(i);
             load(d->prefix + fileInfo.fileName());
         }
@@ -68,24 +69,29 @@ namespace MicroBlogEngine {
         return(d->groups.keys());
     }
 
-
     PluginInterface *PluginLoader::instance(const QString &name)
     {
-        if (d->groups.contains(name)) {
+        if (d->groups.contains(name))
+        {
             return(d->groups[name]->instance());
-        } else {
+        }
+        else
+        {
             return(0);
         }
     }
 
-
     void PluginLoader::load(const QString &pluginName)
     {
+        if(d->groups.contains(pluginName))
+            return;
+
         QPluginLoader loader(pluginName);
 
         QObject *plugin = loader.instance();
 
-        if (plugin) {
+        if (plugin)
+        {
             PluginInterface *iface = 0;
             iface = dynamic_cast<PluginInterface *> (plugin);
             if(iface == NULL)
@@ -96,11 +102,12 @@ namespace MicroBlogEngine {
 
             d->groups[pluginName] = iface;
             qDebug() << "PluginLoader::load" << "Loading " << pluginName << ".." << endl;
-        } else {
+        }
+        else
+        {
             qDebug() << loader.errorString() << endl;
         }
     }
 
 #include "pluginloader.moc"
-
 } // namespace end
