@@ -32,7 +32,7 @@ namespace MicroBlogEngine
             Private() {}
             ~Private() {}
             
-        GUID m_id;
+        QUuid m_id;
         QDateTime m_time;
         QString m_from;
         QString m_who;
@@ -50,12 +50,12 @@ namespace MicroBlogEngine
         delete d;
     }
     
-    GUID MicroblogItem::Id() const
+    QUuid MicroblogItem::Id() const
     {
         return d->m_id;
     }
     
-    void MicroblogItem::Id(const GUID &val)
+    void MicroblogItem::Id(const QUuid &val)
     {
         d->m_id = val;
     }
