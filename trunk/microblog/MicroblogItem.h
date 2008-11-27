@@ -33,8 +33,8 @@ namespace MicroBlogEngine
 	    MicroblogItem();
 	    ~MicroblogItem();
         
-        GUID Id() const;
-        void Id(const GUID &val);
+        QUuid Id() const;
+        void Id(const QUuid &val);
         
         QDateTime time() const;
         void time(const QDateTime &val);
