@@ -6,6 +6,10 @@ set (sourceFiles
     TwitterPlugin.cpp
 )
 
+set(headerFiles
+	TwitterPlugin.h
+)
+
 set(QTMOC_SRCS
 	TwitterPlugin.h
 	../PluginInterface.h
@@ -15,7 +19,7 @@ qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
 
 set(sourceFiles
 	${sourceFiles}
-	${QT_MOC_SRCS}
+	${headerFiles}
 )
 
 set(libs
@@ -30,9 +34,7 @@ include_directories(
     ${QT_INCLUDES}
 )
 
-add_custom_target(twitterpluginmoc ALL DEPENDS ${QT_MOC_SRCS})
-add_library(twitterplugin SHARED ${sourceFiles}) 
-add_dependencies(twitterplugin twitterpluginmoc)
+add_library(twitterplugin SHARED ${sourceFiles} ${QT_MOC_SRCS}) 
 
 target_link_libraries(
     twitterplugin

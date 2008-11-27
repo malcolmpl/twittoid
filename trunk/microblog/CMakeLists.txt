@@ -9,6 +9,9 @@ set(sourceFiles
     MicroblogItem.cpp
 	PluginLoader.cpp
 	MicroBlog.cpp
+)
+
+set(headerFiles
 	ConfigurationTO.h
     ConfigurationStorage.h
     MicroblogItem.h
@@ -16,7 +19,7 @@ set(sourceFiles
 	MicroBlog.h
 )
 
-set(QTMOC_SRC
+set(QTMOC_SRCS
 	PluginLoader.h
 	MicroBlog.h
 	PluginInterface.h
@@ -38,12 +41,10 @@ qt4_wrap_cpp(QT_MOC_SRCS ${QTMOC_SRCS})
 
 set(sourceFiles
 	${sourceFiles}
-	${QT_MOC_SRCS}
+	${headerFiles}
 )
 
-add_custom_target(microblogmoc ALL DEPENDS ${QT_MOC_SRCS})
-add_library(microblog SHARED ${sourceFiles})
-add_dependencies(microblog microblogmoc)
+add_library(microblog SHARED ${sourceFiles} ${QT_MOC_SRCS})
 
 target_link_libraries(
     microblog

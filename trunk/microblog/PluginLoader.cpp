@@ -109,5 +109,4 @@ namespace MicroBlogEngine {
         }
     }
 
-#include "pluginloader.moc"
 } // namespace end

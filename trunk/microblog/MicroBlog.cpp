@@ -57,5 +57,3 @@ void MicroBlog::init()
 {
     d->init();
 }
-
-#include "microblog.moc"
