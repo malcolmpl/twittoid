@@ -12,6 +12,7 @@ set(sourceFiles
 )
 
 set(headerFiles
+    ConnectionManager.h
 	ConfigurationTO.h
     ConfigurationStorage.h
     MicroblogItem.h
