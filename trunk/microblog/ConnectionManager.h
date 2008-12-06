@@ -20,6 +20,9 @@
 #ifndef CONNECTIONMANAGER_H_
 #define CONNECTIONMANAGER_H_
 
+#include <QHttp>
+#include <QString>
+
 namespace MicroBlogEngine
 {
     class VISIBLE_SYM ConnectionManager
@@ -27,6 +30,7 @@ namespace MicroBlogEngine
     public:
         ConnectionManager();
         virtual ~ConnectionManager() {};
+        Qstring getFile(QUrl url);
     };
 }
 
