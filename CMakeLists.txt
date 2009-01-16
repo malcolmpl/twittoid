@@ -1,21 +1,42 @@
-PROJECT(microblog)
+project(jsoncpp)
 
-FIND_PACKAGE(Qt4 REQUIRED)
+include( ${QT_USE_FILE} )
 
-cmake_minimum_required(VERSION 2.6)
-
-ADD_DEFINITIONS (${QT_DEFINITIONS})
-
-INCLUDE_DIRECTORIES (
-    ${CMAKE_SOURCE_DIR}
-    ${CMAKE_BINARY_DIR}
-	${CMAKE_SOURCE_DIR}/microblog
-	${CMAKE_SOURCE_DIR}/tests/configurationto
-	${QT_INCLUDE_DIR}
+include_directories(
+		${QT_INCLUDES}
+		${QT_CORE_INCLUDE_DIR}
+		${QT_QTNETWORK_INCLUDE_DIR}
+		${CMAKE_SOURCE_DIR}/jsoncpp
 )
 
-add_subdirectory(microblog)
-add_subdirectory(microblog/plugins)
-add_subdirectory(twittoid)
-add_subdirectory(jsoncpp)
-add_subdirectory(tests/configurationto)
+set (jsoncpp_SRC
+    json_batchallocator.h
+    json_internalarray.inl
+    json_internalmap.inl
+    json_reader.cpp
+    json_value.cpp
+    json_valueiterator.inl
+    json_writer.cpp
+    json/autolink.h
+    json/config.h
+    json/forwards.h
+    json/json.h
+    json/reader.h
+    json/value.h
+    json/writer.h
+)
+
+set(libs
+	${QT_QTGUI_LIBRARY}
+    ${QT_QTCORE_LIBRARY}
+    ${QT_QTNETWORK_LIBRARY}
+)
+
+add_library(jsoncpp SHARED ${jsoncpp_SRC})
+
+target_link_libraries(
+	jsoncpp
+	${libs}
+)
+
+INSTALL(TARGETS jsoncpp DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
